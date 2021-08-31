@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../services/service.service';
-import { Orders,livrasioninformation, PRODUCTS} from '../services/dummydata';
+import { Orders,livrasioninformation, entreprise} from '../services/dummydata';
 @Component({
   selector: 'app-buttonpayer',
   templateUrl: './buttonpayer.component.html',
@@ -14,7 +14,7 @@ export class ButtonpayerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Data :any  = livrasioninformation
+  Data :any  = {Orders,entreprise,livrasioninformation}
   sendData(): void {
     this.service.sendData(this.Data).subscribe(
       data =>{
