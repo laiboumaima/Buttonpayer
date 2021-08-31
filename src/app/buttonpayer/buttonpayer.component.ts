@@ -14,11 +14,11 @@ export class ButtonpayerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Data :any  = {Orders,livrasioninformation,PRODUCTS}
+  Data :any  = livrasioninformation
   sendData(): void {
     this.service.sendData(this.Data).subscribe(
       data =>{
-        console.log(data.json.livrasioninformation)
+        console.log(data.json)
       },
       error =>{
         console.log(error)

@@ -1,3 +1,5 @@
+import { Buyer } from './buyer';
+import { Entreprise } from './entreprise';
 import { Product } from './product';
 export enum OrderStatus {
     reserved='reserved' ,
@@ -10,8 +12,8 @@ export class Order {
     idOrder!: number;
     orderNumber!: string;
     dateOrder!: Date;
-    Enterprise_idEnterprise!: number;
-    Buyer_idBuyer!: number;
+    Enterprise_idEnterprise!: Entreprise;
+    Buyer_idBuyer!: Buyer;
     orderStatus!:OrderStatus
     orderTotal!: number
     totalOutsideTax!:number

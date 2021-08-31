@@ -1,12 +1,13 @@
+import { Entreprise } from './entreprise';
 export class Product {
     idProduct!: number;
   productRef!:string;
   productName!:string;
-  Enterprise_idEnterprise!: number;
+  Enterprise_idEnterprise!: Entreprise;
   price !:string;
   unit!:string;
   category!:string;
   productImage!:string;
-  quantityStock!: number;
+  quantity!: number;
   productDescription!:string;
 }

@@ -1,3 +1,5 @@
+import { Buyer } from './buyer';
+import { Order } from './order';
 import { Entreprise } from './entreprise';
 
 export enum DeliveryStatus {
@@ -16,7 +18,8 @@ export class Livrasioninformation {
   deliveryNumber!:  number;
   startDateDelivery!:Date;
   Enterprise!:  Entreprise;
-  Order_idOrder !:  number;
+      Buyer!:Buyer
+  Order_idOrder !:  Order;
   Address_idAddress !: number;
   endDateDelivery!: Date;
   deliveryStatus !: DeliveryStatus;

@@ -1,4 +1,6 @@
-import { Vendeur } from './vendeur';
+import { Order } from './order';
+import { Contact } from './contact';
+
 export enum PublicPrivate{
    public = 'public',
    private =  'private'
@@ -7,7 +9,8 @@ export class Entreprise {
     idEnterprise!:number
     enterpriseName!:string
     town!:string
-    Contact_idContact!:Vendeur
+    Contact_idContact!:Contact
+
     Address_idAddress!:number
     webSite!:string
     taxIdentificationNumberS!:number

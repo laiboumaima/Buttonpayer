@@ -1,4 +1,4 @@
-export class Vendeur {
+export class Contact {
     id!:  number;
     fname!: string;
     lname!: string;
@@ -6,5 +6,4 @@ export class Vendeur {
     Address_idAddress!: number;
    email!:string;
      Phone!:string;
-
 }
