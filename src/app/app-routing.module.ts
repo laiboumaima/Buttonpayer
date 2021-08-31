@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { ButtonpayerComponent } from './buttonpayer/buttonpayer.component';
+const routes: Routes = [
+ 
+  {path:'',component: ButtonpayerComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
