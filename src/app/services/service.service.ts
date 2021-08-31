@@ -12,8 +12,8 @@ export class ServiceService {
       'Content-Type',
       'application/json'
     );
-    //http://localhost:99/order
-  url = `http://httpbin.org/post`;
+    //http://localhost:99/order real url
+  url = `http://httpbin.org/post`; //totest
   constructor(private http: HttpClient) { }
   sendData(Data:any ):Observable <any>{
     return this.http.post<any>(this.url,Data,{headers:this.headers  }
