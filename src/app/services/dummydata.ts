@@ -36,10 +36,12 @@ export const PRODUCTS: Product[] = [
 
 
   ];
+  //empty order 
+  export const Ordersnull: any = 0
 export const Orders: Order = {idOrder:1,orderNumber:'gggggg',dateOrder:new Date(2020, 8, 22),Enterprise_idEnterprise:entreprise,Buyer_idBuyer:buyer,orderStatus: OrderStatus.pending,orderTotal:22,totalOutsideTax:30,listproducts:PRODUCTS,tva:22};
  
 export const livrasioninformation: Livrasioninformation = 
-  {idDelivery:1,deliveryNumber:11,startDateDelivery:  Date.now(),Enterprise:entreprise,
+  {idDelivery:1,deliveryNumber:11,startDateDelivery: new Date(),Enterprise:entreprise,
     Order_idOrder:Orders,Buyer:buyer,Address_idAddress:2,endDateDelivery:new Date(2021, 9, 22),deliveryStatus: DeliveryStatus.inProgress,deliveryType:DeliveryType.home,deliveryDuration:22,linkGPS:"https://goo.gl/maps/XSPvzZjV1SdfkUQL8"}
 
 

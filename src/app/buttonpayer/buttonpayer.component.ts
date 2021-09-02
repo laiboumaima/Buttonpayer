@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../services/service.service';
-import { Orders,livrasioninformation, entreprise} from '../services/dummydata';
+import { Orders,Ordersnull,livrasioninformation, entreprise} from '../services/dummydata';
 @Component({
   selector: 'app-buttonpayer',
   templateUrl: './buttonpayer.component.html',
@@ -11,19 +11,29 @@ import { Orders,livrasioninformation, entreprise} from '../services/dummydata';
 export class ButtonpayerComponent implements OnInit {
 
   constructor(private service:ServiceService) { }
-
+ error :boolean  = false;
+ messageerror :string=""
   ngOnInit(): void {
   }
-  Data :any  = {Orders,entreprise,livrasioninformation}
+
+  Data :any  = {orders:Ordersnull,entreprise,livrasioninformation}
   sendData(): void {
-    this.service.sendData(this.Data).subscribe(
-      data =>{
-        console.log(data.json)
-      },
-      error =>{
-        console.log(error)
-      }
-    )
+  
+  
+    if ( typeof this.Data.orders != 'undefined'&& this.Data.orders ) {
+      this.service.sendData(this.Data).subscribe(
+        data =>{
+          console.log(data.json)
+        },
+        error =>{
+          console.log(error)
+        }
+      )
+    }else{
+      this.messageerror="commande cant be null "
+     this.error  =true;
+    }
+  
 
   }
 
